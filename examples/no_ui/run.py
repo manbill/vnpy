@@ -11,7 +11,7 @@ from vnpy.trader.engine import MainEngine
 from vnpy_ctp import CtpGateway
 from vnpy_ctastrategy import CtaStrategyApp
 from vnpy_ctastrategy.base import EVENT_CTA_LOG
-
+from vnpy.trader.database import get_database
 
 SETTINGS["log.active"] = True
 SETTINGS["log.level"] = INFO
@@ -122,4 +122,5 @@ def run_parent():
 
 
 if __name__ == "__main__":
+    get_database()
     run_parent()
